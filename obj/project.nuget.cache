@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wep/ED+M7uSx5LYyKEsSLUa1WzmtuYcgpAL+54iW1lhv52XRAPv6fOwlfA+LiOXexNCbfTSh3BjCr0bon+AaYQ==",
+  "success": true,
+  "projectFilePath": "C:\\projects\\sandbox\\dotnet6\\BaldurFinance\\BaldurFinance.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andriola\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,31 @@
+﻿@page "/stocks"
+
+<PageTitle>Baldur Finance Stock Market</PageTitle>
+
+@using BaldurFinance.Data
+@inject StockMarketService StockMarketService
+
+<h1>Baldur Finance Stock Market</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (stocks != null && stocks.Any()){
+    @foreach(var stock in stocks) {
+        <h2>Info</h2>
+        <p>@stock?.Info?.Title</p>
+        <p>@stock?.Info?.Ticker</p>
+        <h2>Price</h2>
+        <p>@stock?.Price?.Currency</p>
+        <p>@stock?.Price?.PreviousClose</p>
+        <hr />
+    }
+}
+
+@code {
+    private List<StockMarket.Stock> stocks;
+
+    protected override async Task OnInitializedAsync()
+    {
+        stocks = await StockMarketService.GetStockMarketData();
+    }
+}
